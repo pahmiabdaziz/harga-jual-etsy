@@ -47,7 +47,7 @@ Untuk data kurs real-time, tools ini menggunakan API dari:
 Jika API tidak bisa diakses, akan fallback ke kurs default Rp16.000.
 
 ## 📦 Cara Clone dan Jalankan Lokal
-# Buka index.html di browser
+## Buka index.html di browser
 
 ```bash
 git clone https://github.com/pahmiabdaziz/harga-jual-etsy.git
