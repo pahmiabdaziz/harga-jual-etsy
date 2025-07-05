@@ -39,14 +39,6 @@ Sebuah web tools berbasis Progressive Web App (PWA) untuk membantu Anda menghitu
 - Fetch API untuk kurs USD-IDR
 - PWA: manifest + service worker
 
-## 📦 Cara Clone dan Jalankan Lokal
-
-```bash
-git clone https://github.com/pahmiabdaziz/harga-jual-etsy.git
-cd harga-jual-etsy
-# Buka index.html di browser
-
-
 ## ⚠️ Catatan
 ----------
 
@@ -54,3 +46,9 @@ Untuk data kurs real-time, tools ini menggunakan API dari:
 `https://open.er-api.com/v6/latest/USD`  
 Jika API tidak bisa diakses, akan fallback ke kurs default Rp16.000.
 
+## 📦 Cara Clone dan Jalankan Lokal
+
+```bash
+git clone https://github.com/pahmiabdaziz/harga-jual-etsy.git
+cd harga-jual-etsy
+# Buka index.html di browser
