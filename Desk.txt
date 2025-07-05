@@ -1,0 +1,34 @@
+🔧 Alat bantu untuk menghitung penentuan harga jual di Etsy (Web-Based Calculator). Hitung harga jual produk berdasarkan modal, margin, markup, diskon, ongkir, biaya platform, dan konversi mata uang otomatis.
+
+🔧 Tools Penentu Harga Jual Etsy (Web-Based Calculator). Hitung harga jual produk berdasarkan modal, margin, markup, ongkir, diskon, dan biaya platform Etsy.
+
+
+
+🔧 Tools Penentu Harga Jual Etsy (Web-Based Calculator)
+This project is a fully client-side web app that helps Etsy sellers calculate the optimal selling price for their products. It factors in production costs, shipping, platform fees, and desired margins.
+
+✨ Fitur-fitur Utama:
+
+💰 Perhitungan Akurat Harga Jual
+- Berdasarkan modal, ongkir, margin, markup, dan diskon
+
+💳 Estimasi Fee Platform Etsy
+- Termasuk listing fee, transaction fee, processing fee, dan konversi mata uang
+
+🌐 Kurs Realtime USD ke IDR
+- Menggunakan API publik (fallback jika gagal)
+
+🌗 Dark Mode Toggle
+- Sesuai preferensi pengguna
+
+📊 Visual Margin Progress Bar
+- Warna indikator: merah (rendah), oranye (sedang), hijau (bagus)
+
+📦 Free Shipping Option
+- Memasukkan ongkir ke dalam harga jual
+
+💾 Simpan Hasil ke Local Storage
+- Menyimpan 5 riwayat terakhir tanpa server
+
+📋 Copy to Clipboard
+- Hasil bisa disalin dengan sekali klik

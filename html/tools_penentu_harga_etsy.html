@@ -4,14 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tools Penentu Harga Jual Etsy</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
-<<<<<<< HEAD
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-=======
->>>>>>> 952bac0 (firts init github)
-  <meta name="theme-color" content="#007bff">  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
@@ -217,9 +209,26 @@
   <label>Biaya Tambahan Produksi</label>
   <input type="number" id="biayaTambahan" placeholder="Contoh: 10000">
 
-  <!-- Margin Input -->
+  <label>
+    Biaya Kirim Lokal (Rp)
+    <span style="font-weight: normal; font-size: 0.85em; color: #777;">
+      <i>(Biaya nyata dari penjual ke kurir internasional)</i>
+    </span>
+  </label>
+  <input type="number" id="ongkirLokal" placeholder="Contoh: 20000">
+
+  <!-- Margin Input & Visual -->
   <label>Margin (%)</label>
   <input type="number" id="margin" placeholder="Contoh: 20">
+
+  <div style="margin-top: 5px;">
+    <label style="font-size: 0.85em; color: #555;">
+      Visual Margin: <span id="marginPercentText">0%</span>
+    </label>
+    <div style="background: #ddd; border-radius: 5px; height: 10px;">
+      <div id="marginBar" style="height: 100%; width: 0%; background-color: green; border-radius: 5px;"></div>
+    </div>
+  </div>
 
   <label>Markup (%)</label>
   <input type="number" id="markup" placeholder="Contoh: 50">
@@ -338,6 +347,7 @@ async function hitungHargaJual() {
   // Ambil semua input
   const modal = parseFloat(document.getElementById('modal').value) || 0;
   const tambahan = parseFloat(document.getElementById('biayaTambahan').value) || 0;
+  const ongkirLokal = parseFloat(document.getElementById('ongkirLokal').value) || 0;
   const margin = parseFloat(document.getElementById('margin').value) || 0;
   const markup = parseFloat(document.getElementById('markup').value) || 0;
   const diskon = parseFloat(document.getElementById('diskon').value) || 0;
@@ -352,7 +362,7 @@ async function hitungHargaJual() {
   const kurs = await getRealtimeUSD();
 
   // Perhitungan Dasar
-  const totalModal = modal + tambahan;
+  const totalModal = modal + tambahan + ongkirLokal;
   const nilaiMargin = totalModal * (margin / 100);
 
   // Hitung harga jual (sebelum diskon) berdasarkan kombinasi margin & markup
@@ -392,6 +402,12 @@ async function hitungHargaJual() {
   // Hasil Akhir
   const hargaFinal = hargaSebelumDiskon + totalPotongan;
   const keuntunganBersih = hargaSetelahDiskon - totalModal - totalPotongan;
+
+  // Update Visual Margin Bar
+  document.getElementById('marginPercentText').innerText = `${margin}%`;
+  const bar = document.getElementById('marginBar');
+  bar.style.width = `${Math.min(margin, 100)}%`;
+  bar.style.backgroundColor = margin < 10 ? 'red' : (margin < 25 ? 'orange' : 'green');
 
   // Emoji Lencana Berdasarkan Keuntungan
   const badge = keuntunganBersih >= 20000 ? "💰" : (keuntunganBersih >= 5000 ? "⚠️" : "❌");
@@ -508,19 +524,6 @@ function hapusRiwayat() {
     alert("Riwayat berhasil dihapus.");
     location.reload();
   }
-}
-
-/* Register Service Worker untuk PWA */
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('./service-worker.js')
-      .then(function (registration) {
-        console.log('✅ ServiceWorker terdaftar: ', registration.scope);
-      })
-      .catch(function (err) {
-        console.log('❌ ServiceWorker gagal: ', err);
-      });
-  });
 }
 
 /* Load Riwayat Saat Halaman Dibuka */
