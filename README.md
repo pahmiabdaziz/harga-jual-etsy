@@ -29,7 +29,7 @@ Sebuah web tools berbasis Progressive Web App (PWA) untuk membantu Anda menghitu
 
 ## 🚀 Cara Menjalankan
 
-1. Kunjungi: [https://pahmiabdaziz.github.io/harga-jual-etsy](https://pahmiabdaziz.github.io/harga-jual-etsy)
+1. Kunjungi: [Kunjungi Situs](https://pahmiabdaziz.github.io/harga-jual-etsy)
 2. Klik tombol menu browser → "Add to Home Screen"
 3. Nikmati tools ini seperti aplikasi HP!
 
