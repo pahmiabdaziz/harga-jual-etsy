@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 💸 Tools Penentu Harga Jual Etsy
 
 Sebuah web tools berbasis Progressive Web App (PWA) untuk membantu Anda menghitung harga jual produk di Etsy secara akurat dengan mempertimbangkan:
@@ -109,3 +110,7 @@ git clone https://github.com/pahmiabdaziz/harga-jual-etsy.git
 cd harga-jual-etsy
 # Buka index.html di browser
 >>>>>>> 952bac0 (firts init github)
+=======
+# harga-jual-etsy
+🔧 Tools Penentu Harga Jual Etsy adalah web app sederhana berbasis PWA yang membantu seller Etsy menghitung harga jual produk secara tepat dan menguntungkan, berdasarkan margin, markup, diskon, biaya platform, dan kurs USD ke IDR secara real-time. Support dark mode &amp; Add to Home Screen.
+>>>>>>> 00811463bb02fefab3a9961ef3f48e4db18ce2cf
