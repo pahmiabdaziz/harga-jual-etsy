@@ -1,4 +1,4 @@
-const CACHE_NAME = "etsy-tools-v1";
+const CACHE_NAME = "etsy-tools";
 const urlsToCache = [
   "./",
   "./index.html",
